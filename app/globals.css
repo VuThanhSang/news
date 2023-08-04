@@ -1,7 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* globals.css */
 
+@font-face {
+  font-family: "Verdana";
+  src: url("/fonts/verdana.woff2") format("woff2"),
+    url("/fonts/verdana.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* globals.css */
+
+@font-face {
+  font-family: "Kapra Bold";
+  src: url("/fonts/KapraBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+h1 {
+  font-family: "Kapra Bold", sans-serif;
+}
+html {
+  font-family: "Verdana", sans-serif;
+}
 .nav-category {
   color: white;
   margin: 20px 20px 20px 0px;

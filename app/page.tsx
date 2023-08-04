@@ -1,9 +1,9 @@
-import Hot from "@/components/Hot";
+import HotNews from "@/components/HotNews";
 
 export default function Home() {
   return (
     <div>
-      <Hot />
+      <HotNews />
     </div>
   );
 }
