@@ -21,6 +21,10 @@
 h1 {
   font-family: "Kapra Bold", sans-serif;
 }
+li {
+  margin-bottom: 15px;
+  cursor: pointer;
+}
 html {
   font-family: "Verdana", sans-serif;
 }
@@ -28,7 +32,37 @@ html {
   color: white;
   margin: 20px 20px 20px 0px;
 }
-/* 
+
+@media only screen and (min-width: 35.25em) and (max-width: 63.1875em) {
+  .header__slogan,
+  .header__bn {
+    display: none;
+  }
+  .navbar__pc {
+    display: none;
+  }
+  .navbar__mobile {
+    display: block;
+  }
+  .card {
+    width: 100%;
+  }
+  .card__img {
+    /* flex-direction: column; */
+    width: 240px;
+    height: 180px;
+  }
+  .card__title--pc {
+    display: none;
+  }
+  .card__title--mobile {
+    display: block;
+  }
+  .shortcut {
+    display: none;
+  }
+}
+/*
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

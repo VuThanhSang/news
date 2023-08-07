@@ -22,8 +22,8 @@ const Header = () => {
   const date = new Date(Date.now());
 
   return (
-    <div className="flex justify-center space-x-12  mt-3 ">
-      <div className="flex space-x-1">
+    <div className="flex flex-wrap justify-center space-x-12  mt-3 ">
+      <div className=" flex space-x-1">
         <SunIcon className="w-5" />
         <h3 className="text-sm mt-2">29</h3>
         <h3 className="text-sm mt-2">Tp.HCM</h3>
@@ -32,10 +32,12 @@ const Header = () => {
         <CalendarIcon className="w-5" />
         <h3 className="text-sm mt-2">{getDateString(date)}</h3>
       </div>
-      <button className="bg-blue-700 text-white p-2  rounded text-sm ">
+      <button className="header__bn bg-blue-700 text-white p-2  rounded text-sm ">
         Breaking News
       </button>
-      <h3 className="text-xs mt-3">Cập nhật xu hướng hoa mới nhất</h3>
+      <h3 className="header__slogan text-xs mt-3">
+        Cập nhật xu hướng hoa mới nhất
+      </h3>
       {/* swap language */}
       <div
         className=" cursor-pointer w-32 rounded-xl h-6 mt-2 border-4 border-slate-950 border-opacity-80 items-center"
