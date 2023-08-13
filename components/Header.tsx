@@ -5,12 +5,17 @@ import {
   MoonIcon,
   SunIcon,
 } from "@heroicons/react/outline";
+import { useTheme } from "next-themes";
 import React, { useEffect, useState } from "react";
 
 // dateString = 'Wednesday, 2 August 2023'
 const Header = () => {
+  const { theme, setTheme } = useTheme();
+  useEffect(() => {
+    setTheme("light");
+  }, []);
+
   const [language, setLanguage] = useState(false);
-  const [mode, setMode] = useState("light");
   const getDateString = (date: Date) => {
     const day = date.toLocaleDateString("en-US", { weekday: "long" });
     const month = date.toLocaleDateString("en-US", { month: "long" });
@@ -22,7 +27,7 @@ const Header = () => {
   const date = new Date(Date.now());
 
   return (
-    <div className="flex flex-wrap justify-center space-x-12  mt-3 ">
+    <div className="flex flex-wrap justify-center space-x-12  mt-3">
       <div className=" flex space-x-1">
         <SunIcon className="w-5" />
         <h3 className="text-sm mt-2">29</h3>
@@ -59,21 +64,20 @@ const Header = () => {
         )}
       </div>
       {/* dark mode light mode */}
-      {mode === "light" && (
+      {theme !== "dark" ? (
         <div
           className="flex items-center cursor-pointer w-12 rounded-xl h-6 mt-2 bg-slate-400"
           onClick={() => {
-            setMode("dark");
+            setTheme("dark");
           }}
         >
           <SunIcon className="rounded-full bg-white w-5 m-0.5" />
         </div>
-      )}
-      {mode === "dark" && (
+      ) : (
         <div
           className="flex items-center justify-end cursor-pointer w-12 rounded-xl h-6 mt-2 bg-gray-500"
           onClick={() => {
-            setMode("light");
+            setTheme("light");
           }}
         >
           <MoonIcon className="rounded-full bg-gray-900 w-5 m-0.5 text-white" />

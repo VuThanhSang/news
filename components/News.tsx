@@ -26,7 +26,6 @@ const News = ({ articles }: Props) => {
           })}
         </div>
       </div>
-
       <div
         className="shortcut
       mt-5 mr-[10%]"

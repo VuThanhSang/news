@@ -1,4 +1,5 @@
 import { Article } from "@/types";
+import Link from "next/link";
 interface Props {
   article: Article;
 }
@@ -8,7 +9,7 @@ const Card = ({ article }: Props) => {
       <h1 className="card__title--mobile w-full text-lg m-2 hidden">
         <strong>" {article.title} "</strong>
       </h1>
-      <div className="card  mt-8 mb-8 w-full flex ">
+      <div className="card  mt-8 mb-8 w-[96%] flex ">
         <img
           src={article.thumbnails}
           alt="thumbnails"
@@ -21,12 +22,12 @@ const Card = ({ article }: Props) => {
               <strong> {article.tag}</strong>
             </p>
           </div>
-          <a
+          <Link
             href={"/details/" + article.title}
-            className="card__title--pc text-lg m-2 cursor-pointer"
+            className="card__title--pc text-base m-2  cursor-pointer"
           >
-            <strong>" {article.title} "</strong>
-          </a>
+            <strong>"{article.title}"</strong>
+          </Link>
           <p className="text-sm mt-3 mb-5 w-full text-gray-700">
             {article.description}
           </p>

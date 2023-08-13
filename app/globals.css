@@ -11,15 +11,12 @@
   font-style: normal;
 }
 /* globals.css */
-
-@font-face {
-  font-family: "Kapra Bold";
-  src: url("/fonts/KapraBold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
+[data-theme="dark"] {
+  --background: #3c3c3c;
+  --foreground: white;
 }
 h1 {
-  font-family: "Kapra Bold", sans-serif;
+  font-family: "Verdana", sans-serif;
 }
 li {
   margin-bottom: 15px;

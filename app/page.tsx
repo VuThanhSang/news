@@ -1,4 +1,6 @@
+import Header from "@/components/Header";
 import HotNews from "@/components/HotNews";
+import Navbar from "@/components/Navbar";
 import News from "@/components/News";
 import { Article } from "@/types";
 
@@ -29,6 +31,8 @@ export default function Home() {
   ];
   return (
     <div>
+      <Header />
+      <Navbar />
       <HotNews />
       <News articles={articles} />
     </div>

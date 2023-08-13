@@ -14,4 +14,5 @@ declare module "@heroicons/react/outline" {
   export const MoonIcon: (props: IconProps) => JSX.Element;
   export const MagnifyingGlassCircleIcon: (props: IconProps) => JSX.Element;
   export const FilmIcon: (props: IconProps) => JSX.Element;
+  export const StarIcon: (props: IconProps) => JSX.Element;
 }
